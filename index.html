@@ -31,9 +31,10 @@
 
 </head>
 
-<body>
+<body data-spy='scroll' data-target='#navbar-example'>
     <!-- Navigation -->
-    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <nav class="navbar navbar-inverse navbar-fixed-top" id="navbar-example" role="navigation">
+
         <div class="container">
     
             <!-- Brand and toggle get grouped for better mobile display -->
@@ -48,7 +49,7 @@
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav">
+                <ul class="nav navbar-nav nav-tabs" role="tablist">
                     <li>
                         <a href="#about">About</a>
                     </li>
@@ -65,7 +66,7 @@
                         <a href="#contact">Contact</a>
                     </li>
                     <li>
-                        <a href="https://www.facebook.com/sidetrackedtaproom/"><i class="fa fa-facebook-official" aria-hidden="true"></i></a> 
+                        <a href="https://www.facebook.com/sidetrackedtaproom/" target="_blank"><i class="fa fa-facebook-official" aria-hidden="true"></i></a> 
                     </li>
                     <li>
                         <a href="tel:+18643861362"><i class="fa fa-phone" aria-hidden="true"></i></a>
@@ -87,104 +88,111 @@
     </header>
 
     <!-- Page Content -->
-    <div class="container">
-
-        <hr class="featurette-divider" id="about">
-
-        <!-- First Featurette -->
-        <div class="featurette" >
-            <img class="featurette-image img-circle img-responsive pull-right" src="http://placehold.it/500x500">
-            <h2 class="featurette-heading">What is SideTracked?
-            </h2>
-            <p class="lead">SideTracked Taproom is located in the heart of downtown Morganton, NC. We serve beer from the tap, but we also sell bottles of both beer and wine.</p>
-        </div>
-
-        <hr class="featurette-divider" id="taplist">
-
-        <!-- Second Featurette -->
-        <div class="featurette">
-        <!-- UnTappd Beer List Here
-            <div id="unTappd"></div -->
-            <img class="featurette-image img-circle img-responsive pull-left" src="http://placehold.it/500x500">
-            <h2 class="featurette-heading">What's on tap?
-            </h2>
-            <p class="lead">Tap List Coming Soon!</p>
-        </div>
-
-        <hr class="featurette-divider" id="beerWine">
-
-        <!-- Third Featurette -->
-        <div class="featurette">
-            <img class="featurette-image img-circle img-responsive pull-right" src="assets/images/cheers.jpg">
-            <h2 class="featurette-heading">Beer and Wine
-            </h2>
-            <p class="lead">A list of featured beer and wine coming soon!</p>
-            <!-- <a href="beerWine.html">See what we have!</a> -->
-        </div>
-
-        <hr class="featurette-divider" id="events">
-
-        <!-- Fourth Featurette -->
-        <div class="featurette">
-            <!-- <img class="featurette-image img-circle img-responsive pull-right" src="http://placehold.it/500x500"> -->
-            <h2 class="featurette-heading">Events Coming Soon!
-                <a href="https://www.facebook.com/sidetrackedtaproom/">Check us out on Facebook!</a><span class="text-muted"></span>
-            </h2>
-
-            <div class="container-outer text-center">
-                <div class="container-inner">
-                    <!-- <p class="lead"><a href="events.html">Check out our events!</a></p> -->
-               </div>
+    <!-- <div class="container"> -->
+        <div class="section">
+            <hr class="featurette-divider" id="about">
+            <!-- First Featurette -->
+            <div class="featurette">
+                <img class="featurette-image img-circle img-responsive pull-right" src="http://placehold.it/500x500">
+                <h2 class="featurette-heading">What is SideTracked?
+                </h2>
+                <p class="lead">SideTracked Taproom is located in the heart of downtown Morganton, NC. We serve beer from the tap, but we also sell bottles of both beer and wine.</p>
             </div>
         </div>
 
-        <hr class="featurette-divider" id="contact">
+        <div class="section">
 
-        <!-- Fifth Featurette -->
-        <div class="featurette">
-            <!-- <img class="featurette-image img-circle img-responsive pull-right" src="http://placehold.it/500x500"> -->
-            <h2 class="featurette-heading">Contact Us!
-                <span class="text-muted"></span>
-            </h2>
-            <form>
-                <div class="form-group">
-                    <label for="name">Name</label>
-                    <input type="text" class="form-control" id="name" placeholder="Name">
-                </div>
-                <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="text" class="form-control" id="email" placeholder="Email Address Here">
-                </div>
-                <div class="form-group">
-                    <label for="message">Message</label>
-                    <textarea class="form-control" name="message" id="message" rows="3" placeholder="Type your message here."></textarea>
-                </div>
-                <button type="submit" class="btn btn-default">Submit</button>
-            </form>
+         <hr class="featurette-divider" id="taplist">
+            <!-- Second Featurette -->
+            <div class="featurette">
+            <!-- UnTappd Beer List Here
+                <div id="unTappd"></div -->
+                <img class="featurette-image img-circle img-responsive pull-left" src="assets/images/tap.jpeg">
+                <h2 class="featurette-heading">What's on tap?
+                </h2>
+                <p class="lead">Tap List Coming Soon!</p>
+            </div>
         </div>
+            
+        <div class="section">
 
-        <hr class="featurette-divider">
+            <hr class="featurette-divider" id="beerWine">
+            <!-- Third Featurette -->
+            <div class="featurette">
+                <img class="featurette-image img-circle img-responsive pull-right" src="assets/images/beercheers.jpg">
+                <h2 class="featurette-heading">Beer and Wine
+                </h2>
+                <p class="lead">A list of featured beer and wine coming soon!</p>
+                <!-- <a href="beerWine.html">See what we have!</a> -->
+            </div>
+        <!-- </div> -->
 
-        <!-- Footer -->
-        <footer class="text-center">
-            <div class="row">
-                <div class="col-md-12">
-                    <p>Copyright &copy; SideTracked 2017</p>
-                    <p id="info">609 S Green St STE 100, Morganton, NC | <a href="tel:+18643861362">(864) 386-1362</a></p>
+        <!-- <div class="section"> -->
+            <!-- Fourth Featurette -->
+            <div class="featurette">
+
+                <hr class="featurette-divider" id="events">
+                <!-- <img class="featurette-image img-circle img-responsive pull-right" src="http://placehold.it/500x500"> -->
+                <h2 class="featurette-heading">Events Coming Soon!
+                    <a href="https://www.facebook.com/sidetrackedtaproom/">Check us out on Facebook!</a><span class="text-muted"></span>
+                </h2>
+
+                <div class="container-outer text-center">
+                    <div class="container-inner">
+                        <!-- <p class="lead"><a href="events.html">Check out our events!</a></p> -->
+                   </div>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-md-5"></div>
-                    <div class="col-md-2">
-                        <a href="https://www.facebook.com/sidetrackedtaproom/"><i class="fa fa-facebook-official" aria-hidden="true"></i></a> | <a href="mailto:sidetracked@gmail.com"><i class="fa fa-envelope" aria-hidden="true"></i></a> | <a href="tel:+18643861362"><i class="fa fa-phone" aria-hidden="true"></i></a>
+        </div>
+        
+        <div id="last">
+
+            <hr class="featurette-divider" id="contact">
+            
+            <!-- Fifth Featurette -->
+            <div class="featurette">
+                <!-- <img class="featurette-image img-circle img-responsive pull-right" src="http://placehold.it/500x500"> -->
+                <h2 class="featurette-heading">Contact Us!
+                    <span class="text-muted"></span>
+                </h2>
+                <form>
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" class="form-control" id="name" placeholder="Name">
                     </div>
-                    <!-- <div class="col-md-2"> -->
-                    <!-- </div> -->
-                <div class="col-md-5"></div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="text" class="form-control" id="email" placeholder="Email Address Here">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea class="form-control" name="message" id="message" rows="3" placeholder="Type your message here."></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-default">Submit</button>
+                </form>
             </div>
-        </footer>
 
-    </div>
+            <!-- Footer -->
+            <footer class="text-center">
+                <div class="row">
+                    <div class="col-md-12">
+                        <img id="sidetrackedImg" src="assets/images/SideTracked.jpeg" alt="SideTracked Logo">
+                        <p>Copyright &copy; SideTracked 2017</p>
+                        <p id="info">609 S Green St STE 100, Morganton, NC | <a href="tel:+18643861362">(864) 386-1362</a></p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-5"></div>
+                        <div class="col-md-2">
+                            <a href="https://www.facebook.com/sidetrackedtaproom/" target="_blank"><i class="fa fa-facebook-official" aria-hidden="true"></i></a> | <a href="mailto:sidetracked@gmail.com"><i class="fa fa-envelope" aria-hidden="true"></i></a> | <a href="tel:+18643861362"><i class="fa fa-phone" aria-hidden="true"></i></a>
+                        </div>
+                        <!-- <div class="col-md-2"> -->
+                        <!-- </div> -->
+                    <div class="col-md-5"></div>
+                </div>
+            </footer>
+        </div>
+    <!-- </div> -->
     <!-- /.container -->
 
     <!-- jQuery -->

@@ -4,6 +4,29 @@
 	color: white;
 }
 
-h1 {
+h1, .navbar-brand {
 	font-family: 'Ultra', serif;
+	color: white;
+}
+
+#sidetrackedImg {
+	max-height: 150px;
+}
+
+.section {
+	width: 100%;
+	padding: 15px 0;
+	z-index: 1;
+	background-color: white;
+	margin-bottom: 500px;
+}
+
+.featurette{
+	width: 90%;
+	max-height: 38em;
+	margin: 0 auto;
+}
+
+#last{
+	background-color: white;
 }
