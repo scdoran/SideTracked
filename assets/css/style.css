@@ -48,7 +48,7 @@ h1, .navbar-brand {
 }
 
 .hiddenPic2 {
-	background-image: url('..//images/beer.jpg');
+	background-image: url('../images/bottles.jpeg');
 	min-height: 500px;
 }
 
@@ -59,7 +59,7 @@ h1, .navbar-brand {
 
 @media only screen and (max-device-width: 1024px) {
 	.hiddenPic1, .hiddenPic2, .hiddenPic3 {
-		background-attachment: scroll;
+		display: none;
 	}
 }
 
