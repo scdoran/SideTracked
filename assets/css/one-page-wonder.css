@@ -45,9 +45,6 @@ body {
     opacity: .8;
 }
 
-.featurette {
-    overflow: hidden;
-}
 
 .featurette-image{
     max-width: 450px;

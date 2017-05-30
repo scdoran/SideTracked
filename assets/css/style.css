@@ -22,12 +22,18 @@ h1, .navbar-brand {
 	padding: 15px 0;
 	z-index: 1;
 	background-color: white;
+	min-height: 500px;
+	overflow: auto;
+	height:auto;
 }
 
 .featurette{
 	width: 90%;
 	max-height: 44em;
 	margin: 0 auto;
+	min-height: 500px;
+	/*overflow: auto;*/
+	height:auto;
 }
 
 /*Parallax Code*/
@@ -38,8 +44,6 @@ h1, .navbar-brand {
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
-	/*background-image: url('../images/tracks.jpg');
-	min-height: 500px;*/
 }
 
 .hiddenPic1 {
@@ -57,11 +61,45 @@ h1, .navbar-brand {
 	min-height: 500px;
 }
 
-@media only screen and (max-device-width: 1024px) {
-	.hiddenPic1, .hiddenPic2, .hiddenPic3 {
-		display: none;
-	}
+
+/*Taplist and Events Code*/
+
+#menu {
+	overflow-y: hidden;
+	min-height: 500px;
+	height:auto;
+	overflow: auto;
 }
+
+.beerImg .eventImg {
+	max-width: 50px;
+	float: left;
+	display: inline-block;
+	margin-right: 5px;
+}
+
+.beerName .description .eventName{
+	text-align: center;
+}
+
+.beerInfo > li {
+	display: inline-block;
+	margin-left: 5px;
+	text-align: center;
+}
+
+.price .start_time .end_time {
+	text-align: left;
+}
+
+.eList{
+	margin-top: 25px;
+}
+
+.eventList {
+	margin-top: 10px;
+}
+
 
 /*Footer Code */
 
@@ -71,4 +109,25 @@ h1, .navbar-brand {
 
 #sidetrackedImg {
 	max-height: 150px;
+}
+
+/*Small Screen Code*/
+
+@media only screen and (max-device-width: 1024px) {
+	.hiddenPic1, .hiddenPic2, .hiddenPic3 {
+		display: none;
+	}
+
+	.featurette-image{
+		display: block;
+		margin: auto;
+	}
+
+	.eList .eventList {
+		text-align: center;
+	}
+
+	#eventLink {
+		text-align: center;
+	}
 }

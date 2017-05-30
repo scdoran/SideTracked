@@ -62,9 +62,9 @@
                     <li>
                         <a href="#events">Events</a>
                     </li>
-                    <li>
+                    <!-- <li>
                         <a href="#contact">Contact</a>
-                    </li>
+                    </li> -->
                     <li>
                         <a href="https://www.facebook.com/sidetrackedtaproom/" target="_blank"><i class="fa fa-facebook-official" aria-hidden="true"></i></a> 
                     </li>
@@ -107,15 +107,15 @@
          <hr class="featurette-divider" id="taplist">
             <!-- Second Featurette -->
             <div class="featurette">
-            <!-- UnTappd Beer List Here
-                <div id="unTappd"></div -->
+            <!-- UnTappd Beer List Here -->
                 <h2 class="featurette-heading">What's on tap?
                 </h2>
-                <p class="lead">Tap List Coming Soon!</p>
-                <img class="featurette-image img-circle img-responsive pull-left" src="assets/images/tap.jpeg">
-                <!-- <div class="overlay">
-                    <div class="text">What's On Tap?</div>
-                </div> -->
+                <div class="row">
+                    <img class="featurette-image img-circle img-responsive pull-left col-md-6" src="assets/images/tap.jpeg">
+                <!-- <div class="overlay"> -->
+                
+                    <div id="menu" class="col-md-6"></div>
+                </div>
             </div>
         </div>
 
@@ -129,7 +129,7 @@
                 <h2 class="featurette-heading">Beer and Wine
                 </h2>
                 <p class="lead">A list of featured beer and wine coming soon!</p>
-                <img class="featurette-image img-circle img-responsive pull-right" src="assets/images/beercheers.jpg">
+                <img class="featurette-image img-circle img-responsive" src="assets/images/beer.jpg">
                 <!-- <a href="beerWine.html">See what we have!</a> -->
             </div>
         <!-- </div> -->
@@ -140,14 +140,22 @@
 
                 <hr class="featurette-divider" id="events">
                 <!-- <img class="featurette-image img-circle img-responsive pull-right" src="http://placehold.it/500x500"> -->
-                <h2 class="featurette-heading">Events Coming Soon!
-                    <a href="https://www.facebook.com/sidetrackedtaproom/">Check us out on Facebook!</a><span class="text-muted"></span>
-                </h2>
+                <h2 class="featurette-heading">Events</h2>
 
-                <div class="container-outer text-center">
-                    <div class="container-inner">
-                        <!-- <p class="lead"><a href="events.html">Check out our events!</a></p> -->
-                   </div>
+                <div class="row eList">
+                    <div class="col-md-6">
+                        <img class="featurette-image img-circle img-responsive" src="assets/images/beercheers.jpg">
+                    </div>
+
+                    <div class="col-md-6">
+                        <div id="upcomingEvents">
+                        <!-- <p class="lead"><a href="events.html">Check out more events!</a></p> -->
+                        </div>
+                    </div>
+
+                    <h2>
+                        <a id="eventLink" href="https://www.facebook.com/sidetrackedtaproom/">Check us out on Facebook!</a><span class="text-muted"></span>
+                    </h2>
                 </div>
             </div>
         </div>
@@ -156,15 +164,25 @@
         
         <div id="last">
 
-            <hr class="featurette-divider" id="contact">
+            <!-- <hr class="featurette-divider" id="contact"> -->
             
             <!-- Fifth Featurette -->
-            <div class="featurette">
+            <!-- <div class="featurette"> -->
                 <!-- <img class="featurette-image img-circle img-responsive pull-right" src="http://placehold.it/500x500"> -->
-                <h2 class="featurette-heading">Contact Us!
+                <!-- <h2 class="featurette-heading">Contact Us!
                     <span class="text-muted"></span>
                 </h2>
-                <form>
+                
+                <div class="row">
+                        <div class="col-md-12 text-center">
+                            <a href="https://www.facebook.com/sidetrackedtaproom/" target="_blank"><img src="assets/images/facebook.png" class="contact"></a>
+
+                            <a href="mailto:emilysilke@yahoo.com"><img src="assets/images/email.png" class="contact"></a>
+                            <a href="tel:+18643861362"><img src="assets/images/phone.png" class="contact"></a>
+                        </div>
+                </div> -->
+
+                <!-- <form>
                     <div class="form-group">
                         <label for="name">Name</label>
                         <input type="text" class="form-control" id="name" placeholder="Name">
@@ -178,7 +196,7 @@
                         <textarea class="form-control" name="message" id="message" rows="3" placeholder="Type your message here."></textarea>
                     </div>
                     <button type="submit" class="btn btn-default">Submit</button>
-                </form>
+                </form> -->
             </div>
 
             <!-- Footer -->
@@ -193,7 +211,7 @@
                 <div class="row">
                     <div class="col-md-5"></div>
                         <div class="col-md-2">
-                            <a href="https://www.facebook.com/sidetrackedtaproom/" target="_blank"><i class="fa fa-facebook-official" aria-hidden="true"></i></a> | <a href="mailto:sidetracked@gmail.com"><i class="fa fa-envelope" aria-hidden="true"></i></a> | <a href="tel:+18643861362"><i class="fa fa-phone" aria-hidden="true"></i></a>
+                            <a href="https://www.facebook.com/sidetrackedtaproom/" target="_blank"><i class="fa fa-facebook-official" aria-hidden="true"></i></a> | <a href="mailto:emilysilke@yahoo.com"><i class="fa fa-envelope" aria-hidden="true"></i></a> | <a href="tel:+18643861362"><i class="fa fa-phone" aria-hidden="true"></i></a>
                         </div>
                         <!-- <div class="col-md-2"> -->
                         <!-- </div> -->
@@ -215,6 +233,9 @@
 
     <!-- Scroll Reveal JS -->
     <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+
+    <!-- Moment.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.js"></script>
 
     <!-- Custom Javascript for the site. -->
     <script src="assets/js/app.js"></script>

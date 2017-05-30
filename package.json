@@ -1,0 +1,24 @@
+{
+  "name": "sidetracked",
+  "version": "1.0.0",
+  "description": "Stuffs for SideTracked",
+  "main": "server.js",
+  "dependencies": {
+    "moment": "^2.18.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/scdoran/SideTracked.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/scdoran/SideTracked/issues"
+  },
+  "homepage": "https://github.com/scdoran/SideTracked#readme"
+}
