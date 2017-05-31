@@ -6,13 +6,13 @@ $(document).ready(function() {
  	sr.reveal('.featurette');
   	sr.reveal('#last');
 
-	function trim(description){
+	function trim(description, maxLength){
 	   var desc = description;
 
-	   if (description.length > 10)
-	      desc = description.substring(0, 10)+ "<a src='"+ description + "'>...</a>";
+	   if (description.length > maxLength)
+	      desc = description.substring(0, maxLength)+ "<a src='"+ description + "'>...</a>";
 	   else
-	      return description;
+	      return desc;
 	};
 
 	// Gathering taplist information from UnTappd
@@ -33,9 +33,10 @@ $(document).ready(function() {
 		    	var beerName = $("<h3 data-name='"+element.name+"' class='beerName'>" + element.name + "</h3>");
 		    	var beerStyle = $("<h4 data-style='"+element.style+"' class='beerStyle'>" + element.style + "</h4>");
 		    	
-		    	var beerInfo = $("<ul class='beerInfo'><li>" + element.abv + "%</li><li>" + element.brewery + "</li><li>" + element.brewery_location +"</li><li>$" + element.containers[0].price + "</li></ul>");
+		    	var beerInfo = $("<ul class='beerInfo'><li>ABV: " + element.abv + "%</li> | <li>" + element.brewery + "</li>, <li>" + element.brewery_location +"</li> | <li>$" + element.containers[0].price + "</li></ul>");
 		    	
 		    	trim(element.description);
+
 		    	var desc = $("<p class='description' data-desc='" + element.name + "'>" + element.description + "</p>");
 		    	// var price = $("<p class='price'>$ " + element.containers[0].price + "</p>");
 		    	
