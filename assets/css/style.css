@@ -71,6 +71,10 @@ h1, .navbar-brand {
 	overflow: auto;
 }
 
+.tapItems{
+	margin-top: 40px;
+}
+
 .beerImg {
 	max-width: 50px;
 	float: left;
@@ -124,7 +128,17 @@ h1, .navbar-brand {
 	}
 
 	#tapPic{
-		display: none;
+		display: block;
+		margin: auto;
+	}
+
+	.beerInfo > li {
+		display: inline-block;
+		margin-left: 0px;
+	}
+
+	ul.beerInfo {
+		padding-left: 0;
 	}
 
 	.eList .eventList {
@@ -133,5 +147,7 @@ h1, .navbar-brand {
 
 	#eventLink {
 		text-align: center;
+		display: block;
+		margin: auto;
 	}
 }
