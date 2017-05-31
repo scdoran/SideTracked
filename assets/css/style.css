@@ -127,10 +127,10 @@ h1, .navbar-brand {
 		margin: auto;
 	}
 
-	#tapPic{
+	/*#tapPic{
 		display: block;
 		margin: auto;
-	}
+	}*/
 
 	.beerInfo > li {
 		display: inline-block;
