@@ -33,7 +33,7 @@ $(document).ready(function() {
 		    	var beerName = $("<h3 data-name='"+element.name+"' class='beerName'>" + element.name + "</h3>");
 		    	var beerStyle = $("<h4 data-style='"+element.style+"' class='beerStyle'>" + element.style + "</h4>");
 		    	
-		    	var beerInfo = $("<ul class='beerInfo'><li>ABV: " + element.abv + "%</li> | <li>" + element.brewery + "</li>, <li>" + element.brewery_location +"</li> | <li>$" + element.containers[0].price + "</li></ul>");
+		    	var beerInfo = $("<ul class='beerInfo'><li>ABV: " + element.abv + "%</li> | <li>" + element.brewery + "</li>, <li>" + element.brewery_location +"</li></ul>");
 		    	
 		    	trim(element.description);
 
@@ -67,24 +67,31 @@ $(document).ready(function() {
 		    	var time = element.start_time;
 				var start = (moment(time, "YYYY-MM-DDTHH:mm:ss.SSSSZ").format("hh:mm a"));
 				var date = (moment(time, "YYYY-MM-DDTHH:mm:ss.SSSSZ").format("MMM Do, YYYY"));
-
-		    	var div2 = $("<div class='eventList'>");
-
-		    	var eventDate = $("<h3 data-name='"+element.name+"' class='eventDate'>" + date + "</h3>")
-		    	var eventName = $("<h3 data-name='"+element.name+"' class='eventName'>" + element.name + "</h3>");
+				var now = moment();
 		    	
-		    	var descr = $("<p class='eventDesc' data-descr='" + element.name + "'>" + element.description + "</p>");
+		    	if (moment(time, "YYYY-MM-DDT").isSameOrAfter(moment().subtract(1, "day"))) {
+		    		
+		    		var div2 = $("<div class='eventList'>");
 
-		    	var start_time = $("<p class='start_time'>Start time: " + start + "</p>");
-		    	// var end_time = $("<p class='end_time'>" + element.end_time + "</p>");
+			    	var eventDate = $("<h3 data-name='"+element.name+"' class='eventDate'>" + date + "</h3>")
+			    	var eventName = $("<h3 data-name='"+element.name+"' class='eventName'>" + element.name + "</h3>");
+			    	
+			    	var descr = $("<p class='eventDesc' data-descr='" + element.name + "'>" + element.description + "</p>");
 
-		    	div2.append(eventDate);
-		    	div2.append(eventName);
-		    	div2.append(descr);
-		    	div2.append(start_time);
-		    	// div2.append(end_time);
+			    	var start_time = $("<p class='start_time'>Start time: " + start + "</p>");
 
-		    	$("#upcomingEvents").append(div2);
+			    	// var end_time = $("<p class='end_time'>" + element.end_time + "</p>");
+
+			    	div2.append(eventDate);
+			    	div2.append(eventName);
+			    	div2.append(descr);
+			    	div2.append(start_time);
+			    	// div2.append(end_time);
+			    	$("#upcomingEvents").append(div2);
+
+		    	} else {
+		    		console.log("These events have already passed.");
+		    	}
 		    });
 		}
 	});
