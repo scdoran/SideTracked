@@ -102,6 +102,15 @@ h1, .navbar-brand {
 
 .eventList {
 	margin-top: 10px;
+	/*float: left;
+    width: 45%;
+    margin-right: 25px;*/
+}
+
+#eventBtn{
+	display: block;
+	margin: auto;
+	margin-top: 30px;
 }
 
 /*Footer Code */
@@ -142,6 +151,7 @@ h1, .navbar-brand {
 
 	.eList .eventList {
 		text-align: center;
+    	width: 100%;
 	}
 
 	#eventLink {

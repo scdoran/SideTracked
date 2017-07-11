@@ -60,6 +60,8 @@ body {
 .featurette-image{
     max-width: 450px;
     max-height: 350px;
+    display: block;
+    margin: auto;
 }
 
 .featurette-image.pull-left {

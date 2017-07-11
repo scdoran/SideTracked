@@ -2,18 +2,13 @@ $(document).ready(function() {
    // console.log("Running!");
    	$('body').scrollspy({target: '#navbar-example'});
 
-   	window.sr = ScrollReveal();
- 	sr.reveal('.featurette');
-  	sr.reveal('#last');
+   	$('#myModal').on('shown.bs.modal', function () {
+	  $('#myInput').focus()
+	});
 
-	function trim(description, maxLength){
-	   var desc = description;
-
-	   if (description.length > maxLength)
-	      desc = description.substring(0, maxLength)+ "<a src='"+ description + "'>...</a>";
-	   else
-	      return desc;
-	};
+  //  	window.sr = ScrollReveal();
+ 	// sr.reveal('.featurette');
+  // 	sr.reveal('#last');
 
 	// Gathering taplist information from UnTappd
 
@@ -35,8 +30,6 @@ $(document).ready(function() {
 		    	
 		    	var beerInfo = $("<ul class='beerInfo'><li>ABV: " + element.abv + "%</li> | <li>" + element.brewery + "</li>, <li>" + element.brewery_location +"</li></ul>");
 		    	
-		    	trim(element.description);
-
 		    	var desc = $("<p class='description' data-desc='" + element.name + "'>" + element.description + "</p>");
 		    	// var price = $("<p class='price'>$ " + element.containers[0].price + "</p>");
 		    	
@@ -59,7 +52,7 @@ $(document).ready(function() {
 		beforeSend: function(xhr) {
 		     xhr.setRequestHeader("Authorization", "Basic ZW1pbHlzaWxrZUB5YWhvby5jb206YzVQRERDX2NtMUFvNTlmZzc1TGk=");
 		}, success: function(data){
-		    // console.log(data.menu.sections[0].items);
+		    // console.log(data.events);
 		    var events = data.events;
 
 		    events.forEach(function(element){
@@ -68,10 +61,13 @@ $(document).ready(function() {
 				var start = (moment(time, "YYYY-MM-DDTHH:mm:ss.SSSSZ").format("hh:mm a"));
 				var date = (moment(time, "YYYY-MM-DDTHH:mm:ss.SSSSZ").format("MMM Do, YYYY"));
 				var now = moment();
+				var dateAttr = 0;
 		    	
-		    	if (moment(time, "YYYY-MM-DDT").isSameOrAfter(moment().subtract(1, "day"))) {
+		    	if (moment(time, "YYYY-MM-DDT").isSameOrAfter(moment().subtract(1, "day")) && moment(time, "YYYY-MM-DDT").isSameOrBefore(moment().add(7, "day"))) {
 		    		
 		    		var div2 = $("<div class='eventList'>");
+
+		    		div2.attr("data-date", date);
 
 			    	var eventDate = $("<h3 data-name='"+element.name+"' class='eventDate'>" + date + "</h3>")
 			    	var eventName = $("<h3 data-name='"+element.name+"' class='eventName'>" + element.name + "</h3>");
@@ -88,10 +84,12 @@ $(document).ready(function() {
 			    	div2.append(start_time);
 			    	// div2.append(end_time);
 			    	$("#upcomingEvents").append(div2);
+			    	$("#upcomingEvents").append("<hr>");
 
-		    	} else {
-		    		console.log("These events have already passed.");
-		    	}
+		    	} 
+		    	// else {
+		    	// 	console.log("These events have already passed or have not happened yet." + element.name + date);
+		    	// }
 		    });
 		}
 	});
