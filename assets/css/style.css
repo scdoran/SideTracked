@@ -13,6 +13,7 @@ h1, .navbar-brand {
 #logo {
 	display: block;
 	margin: auto;
+	width: 200px;
 }
 
 /*Section Code*/
@@ -34,6 +35,24 @@ h1, .navbar-brand {
 	min-height: 500px;
 	/*overflow: auto;*/
 	height:auto;
+}
+
+.hours{
+	margin-bottom: 30px;
+}
+.section:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.tapRow {
+	margin-top: 55px;
+}
+
+.events{
+	margin-top: 55px;
+	margin-bottom: 40px;
 }
 
 /*Parallax Code*/
@@ -113,6 +132,12 @@ h1, .navbar-brand {
 	margin-top: 30px;
 }
 
+.btn-lg{
+	display: block;
+	margin: auto;
+	margin-top: 30px;
+}
+
 /*Footer Code */
 
 #last{
@@ -120,7 +145,7 @@ h1, .navbar-brand {
 }
 
 #sidetrackedImg {
-	max-height: 150px;
+	max-height: 100px;
 }
 
 /*Small Screen Code*/
@@ -134,11 +159,6 @@ h1, .navbar-brand {
 		display: block;
 		margin: auto;
 	}
-
-	/*#tapPic{
-		display: block;
-		margin: auto;
-	}*/
 
 	.beerInfo > li {
 		display: inline-block;
@@ -158,5 +178,11 @@ h1, .navbar-brand {
 		text-align: center;
 		display: block;
 		margin: auto;
+	}
+
+	#eventBtn{
+		display: block;
+		margin: auto;
+		margin-top: 30px;
 	}
 }

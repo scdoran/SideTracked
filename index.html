@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
     <meta charset="utf-8">
     <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,7 +9,7 @@
 
     <title>SideTracked Taproom</title>
 
-    <link rel="shortcut icon" type="image/x-icon" href="./assets/images/sidetracked.jpg" />
+    <link rel="shortcut icon" type="image/x-icon" href="./assets/images/newsidetracked.jpg" />
 
     <link href="https://fonts.googleapis.com/css?family=Ultra" rel="stylesheet">
 
@@ -99,12 +97,14 @@
                 </h2>
                 <p class="lead">SideTracked Taproom is located in the heart of downtown Morganton, NC. We serve beer from the tap and sell by the pack, but we also sell bottles of wine.</p>
                 <img class="featurette-image img-responsive" id="logo" src="./assets/images/sidetracked.jpg">
-                <h3 class="text-center">Hours</h3>
-                <p><strong>Closed Sunday and Monday</strong></p>
-                <p>Tuesday-Thursday</p>
-                <p><strong>3:00pm-10:00pm</strong></p>
-                <p>Friday-Sunday</p>
-                <p><strong>1:00pm-11:00pm</strong></p>
+                <div class="hours">
+                    <h3 class="text-center">Hours</h3>
+                    <p><strong>Closed Sunday and Monday</strong></p>
+                    <p>Tuesday-Thursday</p>
+                    <p><strong>3:00pm-10:00pm</strong></p>
+                    <p>Friday-Sunday</p>
+                    <p><strong>1:00pm-11:00pm</strong></p>
+                </div>
             </div>
         </div>
         
@@ -118,8 +118,8 @@
             <!-- UnTappd Beer List Here -->
                 <h2 class="featurette-heading">What's on tap?
                 </h2>
-                <div class="row">
-                    <div class="col-md-4">
+                <div class="row tapRow">
+                    <div class="col-md-6">
                         <img class="featurette-image img-circle img-responsive" src="assets/images/STtap.JPG" id="tapPic">
                     </div>
                 <!-- <div class="overlay"> -->
@@ -154,19 +154,18 @@
                 <!-- <img class="featurette-image img-circle img-responsive pull-right" src="http://placehold.it/500x500"> -->
                 <h2 class="featurette-heading">Events</h2>
 
-                <div class="row eList">
-                    <div class="col-md-4">
+                <div class="row">
+                    <div class="col-md-6">
                         <img class="featurette-image img-circle img-responsive" src="assets/images/seating.JPG">
                     </div>
 
-                    <div class="col-md-6">
-                        <button class="btn btn-primary btn-lg" id="eventBtn" data-toggle="modal" data-target="#myModal">Click here to see our events!</button>
+                    <div class="col-md-6 events">
+                        <button id="eventBtn" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">Click here to see our events!</button>
 
                         <h2 class="text-center">
-                            <a id="eventLink" href="https://www.facebook.com/sidetrackedtaproom/">Check us out on Facebook!</a><span class="text-muted"></span>
+                            <a id="eventLink" href="https://www.facebook.com/sidetrackedtaproom/" target="_blank">Check us out on Facebook!</a><span class="text-muted"></span>
                         </h2>
                     </div>
-
                 </div>
             </div>
 
