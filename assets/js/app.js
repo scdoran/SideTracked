@@ -1,17 +1,14 @@
 $(document).ready(function() {
-   // console.log("Running!");
    	$('body').scrollspy({target: '#navbar-example'});
+
+   	$('#CCT').modal('show');
 
    	$('#myModal').on('shown.bs.modal', function () {
 	  $('#myInput').focus()
 	});
 
-  //  	window.sr = ScrollReveal();
- 	// sr.reveal('.featurette');
-  // 	sr.reveal('#last');
-
+ 
 	// Gathering taplist information from UnTappd
-
 	$.ajax({
 		url: "https://business.untappd.com/api/v1/menus/20486?full=true",
 		beforeSend: function(xhr) {

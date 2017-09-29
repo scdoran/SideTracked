@@ -11,6 +11,133 @@ body {
     z-index: 0;
 }
 
+/*Parallax Code*/
+
+.hiddenPic1, .hiddenPic2, .hiddenPic3 {
+    position: relative;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.hiddenPic1 {
+    background-image: url('../images/tracks.jpg');
+    min-height: 500px;
+}
+
+.hiddenPic2 {
+    background-image: url('../images/bottles.jpeg');
+    min-height: 500px;
+}
+
+.hiddenPic3 {
+    background-image: url('../images/cheers.jpg');
+    min-height: 500px;
+}
+
+/*Section Code*/
+
+.section {
+    width: 100%;
+    padding: 15px 0;
+    z-index: 1;
+    background-color: white;
+    min-height: 500px;
+    overflow: auto;
+    height:auto;
+}
+
+.featurette{
+    width: 90%;
+    max-height: 44em;
+    margin: 0 auto;
+    min-height: 500px;
+    /*overflow: auto;*/
+    height:auto;
+}
+
+.featurette-divider {
+    margin: 50px 0;
+    opacity: .8;
+    border: 1px solid #fff;
+}
+
+.featurette-image{
+    max-width: 450px;
+    max-height: 350px;
+    display: block;
+    margin: auto;
+}
+
+.featurette-image.pull-left {
+    margin-right: 40px;
+}
+
+.featurette-image.pull-right {
+    margin-left: 40px;
+}
+
+.featurette-heading {
+    font-size: 50px;
+}
+
+.hours{
+    margin-bottom: 30px;
+}
+.section:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.tapRow {
+    margin-top: 55px;
+}
+
+.events{
+    margin-top: 55px;
+    margin-bottom: 40px;
+}
+
+/*Navbar and Header Code*/
+
+.nav-tabs{
+    border-bottom: none;
+}
+
+#contact > a{
+    margin-top: 15px;
+    /*color: white;*/
+}
+
+h1, .navbar-brand {
+    font-family: 'Ultra', serif;
+    /*color: white;*/
+}
+
+#logo {
+    display: block;
+    margin: auto;
+    width: 200px;
+}
+
+.headline {
+    padding: 120px 0;
+}
+
+.headline h1 {
+    font-size: 100px;
+    color: white;
+    /*background: #fff;*/
+    /*background: rgba(255,255,255,0.9);*/
+}
+
+.headline h2 {
+    font-size: 77px;
+    background: #fff;
+    background: rgba(255,255,255,0.9);
+}
 
 .header-image {
     display: block;
@@ -34,51 +161,117 @@ body {
     -o-background-size: cover;
 }
 
-.headline {
-    padding: 120px 0;
+/*Taplist and Events Code*/
+
+#menu {
+    overflow-y: hidden;
+    min-height: 500px;
+    height:auto;
+    overflow: auto;
 }
 
-.headline h1 {
-    font-size: 100px;
-    color: white;
-    /*background: #fff;*/
-    /*background: rgba(255,255,255,0.9);*/
+.tapItems{
+    margin-top: 40px;
 }
 
-.headline h2 {
-    font-size: 77px;
-    background: #fff;
-    background: rgba(255,255,255,0.9);
+.beerImg {
+    max-width: 50px;
+    float: left;
+    display: inline-block;
+    margin-right: 5px;
 }
 
-.featurette-divider {
-    margin: 50px 0;
-    opacity: .8;
-    border: 1px solid #fff;
+.beerName .description .eventName{
+    text-align: center;
 }
 
+.beerInfo > li {
+    display: inline-block;
+    margin-left: 5px;
+    text-align: center;
+}
 
-.featurette-image{
-    max-width: 450px;
-    max-height: 350px;
+.price .start_time .end_time {
+    text-align: left;
+}
+
+.eList{
+    margin-top: 25px;
+}
+
+.eventList {
+    margin-top: 10px;
+    /*float: left;
+    width: 45%;
+    margin-right: 25px;*/
+}
+
+#eventBtn{
     display: block;
     margin: auto;
+    margin-top: 30px;
 }
 
-.featurette-image.pull-left {
-    margin-right: 40px;
+.btn-lg{
+    display: block;
+    margin: auto;
+    margin-top: 30px;
 }
 
-.featurette-image.pull-right {
-    margin-left: 40px;
-}
-
-.featurette-heading {
-    font-size: 50px;
-}
-
+/*Footer Code */
 footer {
     margin: 15px 0;
+}
+
+.footer-content{
+    margin: 0 auto;
+}
+
+#last{
+    background-color: white;
+}
+
+#sidetrackedImg {
+    max-height: 100px;
+}
+
+
+/* Media Queries */
+@media only screen and (max-device-width: 1024px) {
+    .hiddenPic1, .hiddenPic2, .hiddenPic3 {
+        display: none;
+    }
+
+    .featurette-image{
+        display: block;
+        margin: auto;
+    }
+
+    .beerInfo > li {
+        display: inline-block;
+        margin-left: 0px;
+    }
+
+    ul.beerInfo {
+        padding-left: 0;
+    }
+
+    .eList .eventList {
+        text-align: center;
+        width: 100%;
+    }
+
+    #eventLink {
+        text-align: center;
+        display: block;
+        margin: auto;
+    }
+
+    #eventBtn{
+        display: block;
+        margin: auto;
+        margin-top: 30px;
+    }
 }
 
 @media(max-width:1200px) {

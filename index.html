@@ -2,80 +2,52 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="">
 
     <title>SideTracked Taproom</title>
-
+    
+    <!-- Constant Contact Modal Styling-->
+    <link rel='stylesheet' type='text/css' href='https://static.ctctcdn.com/h/contacts-embedded-signup-assets/1.0.2/css/signup-form.css'>
+    <!-- HTML Tab Icon -->
     <link rel="shortcut icon" type="image/x-icon" href="./assets/images/newsidetracked.jpg" />
-
     <link href="https://fonts.googleapis.com/css?family=Ultra" rel="stylesheet">
-
     <!-- Bootstrap Core CSS -->
-    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
-
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
     <!-- Starter CSS -->
     <link href="assets/css/one-page-wonder.css" rel="stylesheet">
-    
-    <!-- Custom CSS -->
-    <link href="assets/css/style.css" rel="stylesheet">
-
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-
 </head>
 
 <body data-spy='scroll' data-target='#navbar-example'>
     <!-- Navigation -->
-    <nav class="navbar navbar-inverse navbar-fixed-top" id="navbar-example" role="navigation">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <a class="navbar-brand" href="#">SideTracked</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-        <div class="container">
-    
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="#">Sidetracked Taproom</a>
-            </div>
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav nav-tabs" role="tablist">
-                    <li>
-                        <a href="#about">About</a>
-                    </li>
-                    <li>
-                        <a href="#taplist">What's on tap?</a>
-                    </li>
-                    <li>
-                        <a href="#beerWine">Beer and Wine</a>
-                    </li>
-                    <li>
-                        <a href="#events">Events</a>
-                    </li>
-                    <!-- <li>
-                        <a href="#contact">Contact</a>
-                    </li> -->
-                    <li>
-                        <a href="https://www.facebook.com/sidetrackedtaproom/" target="_blank"><i class="fa fa-facebook-official" aria-hidden="true"></i></a> 
-                    </li>
-                    <li>
-                        <a href="tel:+18643861362"><i class="fa fa-phone" aria-hidden="true"></i></a>
-                    </li>
-                </ul>                
-            </div>
-            <!-- /.navbar-collapse -->
-        </div>
-        <!-- /.container -->
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="#about">About</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#taplist">What's on tap?</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#beerWine">Beer and Wine</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#events">Events</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="https://www.facebook.com/sidetrackedtaproom/" target="_blank"><i class="fa fa-facebook-official" aria-hidden="true"></i></a> 
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="tel:+18643861362"><i class="fa fa-phone" aria-hidden="true"></i></a>
+            </li>
+        </ul>
+      </div>
     </nav>
 
     <!-- Full Width Image Header -->
@@ -172,67 +144,70 @@
         <div class="hiddenPic3"></div>
 
         <!-- Modal -->
-            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-              <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                    <h4 class="modal-title" id="myModalLabel">SideTracked Events</h4>
-                  </div>
-                  <div class="modal-body">
-                    <div id="upcomingEvents">
-                        <!-- <p class="lead"><a href="events.html">Check out more events!</a></p> -->
-                    </div>
-                  </div>
-                  <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                  </div>
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">SideTracked Events</h4>
+              </div>
+              <div class="modal-body">
+                <div id="upcomingEvents">
+                    <!-- <p class="lead"><a href="events.html">Check out more events!</a></p> -->
                 </div>
               </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              </div>
             </div>
-        
-        <!-- <div id="last"> -->
+          </div>
+        </div>
 
-            <!-- <hr class="featurette-divider" id="contact"> -->
-            
-            <!-- Fifth Featurette -->
-            <!-- <div class="featurette"> -->
-                <!-- <img class="featurette-image img-circle img-responsive pull-right" src="http://placehold.it/500x500"> -->
-                <!-- <h2 class="featurette-heading">Contact Us!
-                    <span class="text-muted"></span>
-                </h2>
-                
-                <div class="row">
-                        <div class="col-md-12 text-center">
-                            <a href="https://www.facebook.com/sidetrackedtaproom/" target="_blank"><img src="assets/images/facebook.png" class="contact"></a>
-
-                            <a href="mailto:emilysilke@yahoo.com"><img src="assets/images/email.png" class="contact"></a>
-                            <a href="tel:+18643861362"><img src="assets/images/phone.png" class="contact"></a>
-                        </div>
-                </div> -->
-
-                <!-- <form>
-                    <div class="form-group">
-                        <label for="name">Name</label>
-                        <input type="text" class="form-control" id="name" placeholder="Name">
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email</label>
-                        <input type="text" class="form-control" id="email" placeholder="Email Address Here">
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Message</label>
-                        <textarea class="form-control" name="message" id="message" rows="3" placeholder="Type your message here."></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-default">Submit</button>
-                </form> -->
-            <!-- </div> -->
+        <!-- Constant Contact Modal -->
+        <div class="modal fade" id="CCT" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="ctct-embed-signup" style="font: 16px Helvetica Neue, Arial, sans-serif; font: 1rem Helvetica Neue, Arial, sans-serif; line-height: 1.5; -webkit-font-smoothing: antialiased;">
+                   <div style="color:#5b5b5b; background-color:#e8e8e8; border-radius:5px;">
+                       <span id="success_message" style="display:none;">
+                            <div style="text-align:center;">Thanks for signing up!</div>
+                       </span>
+                       <form data-id="embedded_signup:form" class="ctct-custom-form Form" name="embedded_signup" method="POST" action="https://visitor2.constantcontact.com/api/signup">
+                           <h2 style="margin:0;">Sign up to keep up with SideTracked!</h2>
+                           <p>Sign up to get news and updates about tap takeovers or events.</p>
+                           <!-- The following code must be included to ensure your sign-up form works properly. -->
+                           <input data-id="ca:input" type="hidden" name="ca" value="c14a1729-5338-4a84-8667-cc2adde74609">
+                           <input data-id="list:input" type="hidden" name="list" value="1160754222">
+                           <input data-id="source:input" type="hidden" name="source" value="EFD">
+                           <input data-id="required:input" type="hidden" name="required" value="list,email,first_name">
+                           <input data-id="url:input" type="hidden" name="url" value="">
+                           <p data-id="Email Address:p" >
+                            <label data-id="Email Address:label" data-name="email" class="ctct-form-required">Email Address</label> 
+                            <input data-id="Email Address:input" type="text" name="email" value="" maxlength="80">
+                            </p>
+                           <p data-id="First Name:p" >
+                            <label data-id="First Name:label" data-name="first_name" class="ctct-form-required">First Name</label> 
+                            <input data-id="First Name:input" type="text" name="first_name" value="" maxlength="50">
+                           </p>
+                           <button type="submit" class="Button ctct-button Button--block Button-secondary" data-enabled="enabled">Sign Up</button>
+                            <div>
+                                <p class="ctct-form-footer">By submitting this form, you are granting: SideTracked Taproom, 609 S Green St STE 100, Morganton, North Carolina, 28655, United States, http://www.sidetrackedtaproom.com permission to email you. You may unsubscribe via the link found at the bottom of every email.  (See our <a href="http://www.constantcontact.com/legal/privacy-statement" target="_blank">Email Privacy Policy</a> for details.) Emails are serviced by Constant Contact.</p>
+                            </div>
+                       </form>
+                   </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <div class="container-fluid">
         <!-- Footer -->
         <footer class="text-center">
             <div class="row">
-                <div>
+                <div class="footer-content">
                     <img id="sidetrackedImg" src="assets/images/SideTracked.jpeg" alt="SideTracked Logo">
                     <p>Copyright &copy; SideTracked 2017</p>
                     <p id="info">609 S Green St STE 100, Morganton, NC | <a href="tel:+18643861362">(864) 386-1362</a></p>
@@ -251,13 +226,14 @@
     <!-- /.container -->
 
     <!-- jQuery -->
-    <script src="assets/js/jquery.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
 
        <!-- Favicon Implementation -->
     <script src="https://use.fontawesome.com/b2bf409704.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
-    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
 
     <!-- Scroll Reveal JS -->
     <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
@@ -265,8 +241,27 @@
     <!-- Moment.js -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.js"></script>
 
-    <!-- Custom Javascript for the site. -->
+    <!-- Custom Javascript from Constant Contact -->
     <script src="assets/js/app.js"></script>
+
+    <script type='text/javascript'>
+       var localizedErrMap =                {};
+       localizedErrMap['required'] =        'This field is required.';
+       localizedErrMap['ca'] =              'An unexpected error occurred while attempting to send email.';
+       localizedErrMap['email'] =           'Please enter your email address in name@email.com format.';
+       localizedErrMap['birthday'] =        'Please enter birthday in MM/DD format.';
+       localizedErrMap['anniversary'] =     'Please enter anniversary in MM/DD/YYYY format.';
+       localizedErrMap['custom_date'] =     'Please enter this date in MM/DD/YYYY format.';
+       localizedErrMap['list'] =            'Please select at least one email list.';
+       localizedErrMap['generic'] =         'This field is invalid.';
+       localizedErrMap['shared'] =          'Sorry, we could not complete your sign-up. Please contact us to resolve this.';
+       localizedErrMap['state_mismatch'] =  'Mismatched State/Province and Country.';
+        localizedErrMap['state_province'] = 'Select a state/province';
+       localizedErrMap['selectcountry'] =   'Select a country';
+       var postURL = 'https://visitor2.constantcontact.com/api/signup';
+    </script>
+    <!-- More Constant Contact JS -->
+    <script type='text/javascript' src='https://static.ctctcdn.com/h/contacts-embedded-signup-assets/1.0.2/js/signup-form.js'></script>
 
 </body>
 

@@ -4,6 +4,7 @@
   "description": "Stuffs for SideTracked",
   "main": "server.js",
   "dependencies": {
+    "gulp": "^3.9.1",
     "moment": "^2.18.1"
   },
   "devDependencies": {},

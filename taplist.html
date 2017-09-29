@@ -1,71 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
     <meta charset="utf-8">
-    <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="">
 
-    <title>What's on Tap?</title>
-
-    <link rel="shortcut icon" type="image/x-icon" href="./assets/images/sidetracked.jpg" />
-
+    <title>SideTracked Taproom</title>
+    
+    <!-- Constant Contact Modal Styling-->
+    <link rel='stylesheet' type='text/css' href='https://static.ctctcdn.com/h/contacts-embedded-signup-assets/1.0.2/css/signup-form.css'>
+    <!-- HTML Tab Icon -->
+    <link rel="shortcut icon" type="image/x-icon" href="./assets/images/newsidetracked.jpg" />
     <link href="https://fonts.googleapis.com/css?family=Ultra" rel="stylesheet">
-
     <!-- Bootstrap Core CSS -->
-    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
-
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
     <!-- Starter CSS -->
     <link href="assets/css/one-page-wonder.css" rel="stylesheet">
-    
-    <!-- Custom CSS -->
-    <link href="assets/css/style.css" rel="stylesheet">
-
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-
 </head>
 
 <body data-spy='scroll' data-target='#navbar-example'>
     <!-- Navigation -->
-    <nav class="navbar navbar-inverse navbar-fixed-top" id="navbar-example" role="navigation">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <a class="navbar-brand" href="index.html">SideTracked</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-        <div class="container">
-    
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="index.html">Sidetracked Taproom</a>
-            </div>
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav nav-tabs" role="tablist">
-                    <li>
-                        <a href="index.html">Home</a>
-                    </li>
-                    <li>
-                        <a href="https://www.facebook.com/sidetrackedtaproom/" target="_blank"><i class="fa fa-facebook-official" aria-hidden="true"></i></a> 
-                    </li>
-                    <li>
-                        <a href="tel:+18643861362"><i class="fa fa-phone" aria-hidden="true"></i></a>
-                    </li>
-                </ul>                
-            </div>
-            <!-- /.navbar-collapse -->
-        </div>
-        <!-- /.container -->
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="https://www.facebook.com/sidetrackedtaproom/" target="_blank"><i class="fa fa-facebook-official" aria-hidden="true"></i></a> 
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="tel:+18643861362"><i class="fa fa-phone" aria-hidden="true"></i></a>
+            </li>
+        </ul>
+      </div>
     </nav>
 
     <!-- Full Width Image Header -->
@@ -87,7 +57,7 @@
         <!-- Footer -->
         <footer class="text-center">
             <div class="row">
-                <div>
+                <div class="footer-content">
                     <img id="sidetrackedImg" src="assets/images/SideTracked.jpeg" alt="SideTracked Logo">
                     <p>Copyright &copy; SideTracked 2017</p>
                     <p id="info">609 S Green St STE 100, Morganton, NC | <a href="tel:+18643861362">(864) 386-1362</a></p>
@@ -105,16 +75,15 @@
     <!-- .container-fluid -->
 
     <!-- jQuery -->
-    <script src="assets/js/jquery.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
 
        <!-- Favicon Implementation -->
     <script src="https://use.fontawesome.com/b2bf409704.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
-    <script src="assets/js/bootstrap.min.js"></script>
-
-    <!-- Scroll Reveal JS -->
-    <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
 
     <!-- Moment.js -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.js"></script>
