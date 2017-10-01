@@ -15,7 +15,7 @@
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
     <!-- Starter CSS -->
-    <link href="assets/css/one-page-wonder.css" rel="stylesheet">
+    <link href="build/css/styles.min.css" rel="stylesheet">
 </head>
 
 <body data-spy='scroll' data-target='#navbar-example'>
@@ -30,9 +30,6 @@
         <ul class="navbar-nav mr-auto">
             <li class="nav-item">
                 <a class="nav-link" href="#about">About</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#taplist">What's on tap?</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#beerWine">Beer and Wine</a>
@@ -54,7 +51,7 @@
     <header class="header-image">
         <div class="headline">
             <div class="container text-center">
-                <h1>SideTracked</h1>
+                <h1 id="sidetracked">SideTracked</h1>
             </div>
         </div>
     </header>
@@ -81,29 +78,6 @@
         </div>
         
         <div class="hiddenPic1"></div>
-        
-        <div class="section">
-
-         <hr class="featurette-divider" id="taplist">
-            <!-- Second Featurette -->
-            <div class="featurette">
-            <!-- UnTappd Beer List Here -->
-                <h2 class="featurette-heading">What's on tap?
-                </h2>
-                <div class="row tapRow">
-                    <div class="col-md-6">
-                        <img class="featurette-image img-circle img-responsive" src="assets/images/STtap.JPG" id="tapPic">
-                    </div>
-                <!-- <div class="overlay"> -->
-                
-                    <div class="col-md-6 text-center">
-                        <a href="taplist.html"><h2>Click Here to See What We Have On Tap!</h2></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="hiddenPic2"></div>
             
         <div class="section">
 
@@ -112,13 +86,20 @@
             <div class="featurette">
                 <h2 class="featurette-heading">Beer and Wine
                 </h2>
-                <p class="lead">A list of featured beer and wine coming soon!</p>
-                <img class="featurette-image img-circle img-responsive" src="assets/images/merch.JPG">
+                <p class="lead">Check out what we have on tap and by the bottle!</p>
+                <div class="tap-and-bottle">
+                    <img class="featurette-image img-responsive" id="yes-mobile" src="assets/images/STtap.JPG">
+                    <img class="featurette-image img-responsive" id="no-mobile" src="assets/images/merch.JPG">
+                </div>
+                <div id="menu-container"></div>
+
                 <!-- <a href="beerWine.html">See what we have!</a> -->
             </div>
-        <!-- </div> -->
+        </div>
+        
+        <div class="hiddenPic2"></div>
 
-        <!-- <div class="section"> -->
+        <div class="section">
             <!-- Fourth Featurette -->
             <div class="featurette">
 
@@ -127,19 +108,21 @@
                 <h2 class="featurette-heading">Events</h2>
 
                 <div class="row">
-                    <div class="col-md-6">
-                        <img class="featurette-image img-circle img-responsive" src="assets/images/seating.JPG">
+                    <div class="col-md-5">
+                        <img class="featurette-image img-responsive" id="event-image" src="assets/images/seating.JPG">
+                        <h2 class="text-center">
+                            <a id="eventLink" href="https://www.facebook.com/sidetrackedtaproom/" target="_blank">Check out our Facebook for more events!</a><span class="text-muted"></span>
+                        </h2>
                     </div>
 
-                    <div class="col-md-6 events">
-                        <button id="eventBtn" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">Click here to see our events!</button>
 
-                        <h2 class="text-center">
-                            <a id="eventLink" href="https://www.facebook.com/sidetrackedtaproom/" target="_blank">Check us out on Facebook!</a><span class="text-muted"></span>
-                        </h2>
+                    <div class="col-md-7 events">
+                        <button id="eventBtn" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">Click here to see our events!</button>
+                        <div class="upcomingEvents"></div>
                     </div>
                 </div>
             </div>
+        </div>
 
         <div class="hiddenPic3"></div>
 
@@ -152,7 +135,7 @@
                 <h4 class="modal-title" id="myModalLabel">SideTracked Events</h4>
               </div>
               <div class="modal-body">
-                <div id="upcomingEvents">
+                <div class="upcomingEvents">
                     <!-- <p class="lead"><a href="events.html">Check out more events!</a></p> -->
                 </div>
               </div>
@@ -215,7 +198,7 @@
             </div>
             <div class="row">
                 <div class="col-md-5"></div>
-                    <div class="col-md-2">
+                    <div class="col-md-2 contact-icons">
                         <a href="https://www.facebook.com/sidetrackedtaproom/" target="_blank"><i class="fa fa-facebook-official" aria-hidden="true"></i></a> | <a href="mailto:emily@sidetrackedtaproom.com?Subject=New%20Message%20From%20Website"><i class="fa fa-envelope" aria-hidden="true"></i></a> | <a href="tel:+18643861362"><i class="fa fa-phone" aria-hidden="true"></i></a>
                     </div>
                 <div class="col-md-5"></div>
@@ -226,7 +209,8 @@
     <!-- /.container -->
 
     <!-- jQuery -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
 
        <!-- Favicon Implementation -->
@@ -262,6 +246,12 @@
     </script>
     <!-- More Constant Contact JS -->
     <script type='text/javascript' src='https://static.ctctcdn.com/h/contacts-embedded-signup-assets/1.0.2/js/signup-form.js'></script>
+
+        <!-- UnTappd Information -->
+    <script type="text/javascript">
+      !function(e,n){var t=document.createElement("script"),a=document.getElementsByTagName("script")[0];t.async=1,a.parentNode.insertBefore(t,a),t.onload=t.onreadystatechange=function(e,a){(a||!t.readyState||/loaded|complete/.test(t.readyState))&&(t.onload=t.onreadystatechange=null,t=void 0,a||n&&n())},t.src=e}("https://embed-menu-preloader.untappdapi.com/embed-menu-preloader.min.js",function(){PreloadEmbedMenu("menu-container",7477,26178)});
+    </script>
+
 
 </body>
 
